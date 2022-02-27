@@ -74,7 +74,9 @@ function computerChoices() {
     else if (computerOption == 1) {
         computerOption = 'paper';
     }
-    else if (computerOption == 2) { computerOption = 'scissors' }
+    else if (computerOption == 2) {
+        computerOption = 'scissors'
+    }
     console.log(computerOption)
 }
 function play() {
@@ -155,7 +157,7 @@ function gameResult() {
         output3.append(txt)
     }
     restartLink.addEventListener('click', () => {
-        location.reload();
+        window.location.reload();
     })
 
 
