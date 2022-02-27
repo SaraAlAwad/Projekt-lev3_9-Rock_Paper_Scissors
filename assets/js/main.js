@@ -23,15 +23,15 @@ let scoreDisplay = document.querySelector(".scoreDisplay")
 let result = document.createElement("p");
 
 
-// console.log(choices[0])
 possibleChoices.forEach(element => element.addEventListener('click', (e) => {
     console.log("clicked")
     userOption = e.target.id; // what ever was clicked it will stored in userChoise
-    document.querySelector(".header").style.display = 'none'
+
     console.log(userOption)
     rounds()
     computerChoices()
     // play()
+    document.querySelector(".header").style.display = 'none'
     if (no_of_tries <= tries) {
         play();
     }
@@ -84,12 +84,10 @@ function play() {
     if (userOption === computerOption) {
         console.log('its a draw')
         output2.innerHTML = `its a draw You both chose ${userOption}`
-        // i need to do sth here
     }
     if (userOption == 'rock' && computerOption == 'paper') {
         console.log('Computer wins')
         computerScore++
-        // scoreDisplay.innerHTML = `${userScore} : ${computerScore}`
         userPoints.innerHTML = userScore;
         compPoints.innerHTML = computerScore;
         output2.innerHTML = `${computerOption}(comp) beats ${userOption}(user) You Lose!`
@@ -105,7 +103,6 @@ function play() {
     if (userOption == 'paper' && computerOption == 'scissors') {
         console.log('Computer wins')
         computerScore++
-        // scoreDisplay.innerHTML = `${userScore} : ${computerScore}`
         userPoints.innerHTML = userScore;
         compPoints.innerHTML = computerScore;
         output2.innerHTML = `${computerOption} (comp) beats ${userOption} (user)You Lose!`
@@ -113,7 +110,6 @@ function play() {
     if (userOption == 'paper' && computerOption == 'rock') {
         console.log('user wins')
         userScore++;
-        // scoreDisplay.innerHTML = `${userScore} : ${computerScore}`
         userPoints.innerHTML = userScore;
         compPoints.innerHTML = computerScore;
         output2.innerHTML = `${userOption}(user) beats ${computerOption}(comp) You Win!`
@@ -121,7 +117,6 @@ function play() {
     if (userOption == 'scissors' && computerOption == 'rock') {
         console.log("computer wins")
         computerScore++
-        // scoreDisplay.innerHTML = `${userScore} : ${computerScore}`
         userPoints.innerHTML = userScore;
         compPoints.innerHTML = computerScore;
         output2.innerHTML = `${computerOption} (comp) beats ${userOption} (user) You Lose!`
@@ -129,7 +124,6 @@ function play() {
     if (userOption == 'scissors' && computerOption == 'paper') {
         console.log("user wins")
         userScore++;
-        // scoreDisplay.innerHTML = `${userScore} : ${computerScore}`
         userPoints.innerHTML = userScore;
         compPoints.innerHTML = computerScore;
         output2.innerHTML = `${userOption} (user) beats ${computerOption}(comp) You Win!`
