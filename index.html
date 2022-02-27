@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>rock-paper-scissors</title>
+</head>
+
+<body>
+    <header>
+        <h1>Rock Paper Sicssors Geme</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <div>
+                    <p>how many rounds?</p>
+                </div>
+                <div class="rbuttons" id="rbuttons">
+                    <input type="radio" name="num" id="num1" value="5">
+                    <label for="num1">5</label>
+                    <input type="radio" name="num" id="num2" value="10">
+                    <label for="num2">10</label>
+                    <input type="radio" name="num" id="num3" value="15">
+                    <label for="num3">15</label>
+                    <input type="radio" name="num" id="num4" value="20">
+                    <label for="num4">20</label>
+                </div>
+                <div class="output1"></div>
+            </article>
+            <article class="scores">
+                <p><span id="userPoints">0</span> : <span id="computerPoints">0</span></p>
+                <p class="scoreDisplay"></p>
+            </article>
+        </section>
+        <section>
+            <h2 class="header">Let's Play</h2>
+            <div id="output2"></div>
+            <div id="output3"></div>
+            <article class="options">
+                <button class="btn" id="rock"><i class="fa fa-hand-rock-o"></i></button>
+                <button class="btn" id="paper"><i class="fa fa-hand-paper-o"></i></button>
+                <button class="btn" id="scissors"> <i class="fa fa-hand-scissors-o"></i></button>
+            </article>
+            <p>make your move</p>
+            <a href="#" id="reload">restart</a>
+        </section>
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/1eaf9301b3.js" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js">
+    </script>
+
+</body>
+
+</html>
